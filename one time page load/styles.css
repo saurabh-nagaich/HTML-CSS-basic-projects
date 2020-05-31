@@ -1,0 +1,299 @@
+*,
+*::before,
+*::after{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    
+}
+
+body{
+    background: "white";
+}
+html{
+    font-family: 'Roboto', sans-serif;
+    font-size: 10px;
+    text-transform: capitalize;
+}
+
+header{
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    transition: background-color .5s ease;
+    z-index: 1000;
+}
+
+.container{
+    width: 100%;
+    max-width: 120rem;
+    margin: 0 auto;
+    padding: 0 1.5rem;
+}
+
+.nav{
+    width: 100%;
+    height: 10rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 2px solid rgba(255,255,255,.05);
+    transition: height .5s ease;
+}
+
+.nav a{
+    text-decoration: none;
+    color: #fff;
+    font-size: 1.6rem;
+}
+a{
+    text-decoration: none;
+    color: #000000;
+    font-size: 1.6rem;
+}
+.nav .logo{
+    font-size: 3.5rem;
+    font-weight: bold;
+}
+
+.nav-list{
+    list-style: none;
+    display: flex;
+    margin-right: auto;
+    margin-left: 4rem;
+}
+
+.nav-link{
+    margin: 0 2rem;
+    position: relative;
+}
+
+.nav-link::after{
+    content: '';
+    width: 100%;
+    height: 2px;
+    background-color: #fff;
+    position: absolute;
+    left: 0;
+    bottom: -3px;
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform .5s ease;
+}
+
+.nav-link:hover::after{
+    transform: scaleX(1);
+}
+
+#nav-cta{
+    display: inline-block;
+    background-color: #fff;
+    color: #313131;
+    padding: 1rem 2rem;
+    border-radius: 2rem;
+    transition: background-color .5s ease;
+}
+
+#nav-cta:hover{
+    background-color: #d3d3d3;
+}
+
+
+/*Apply styles after scroll*/
+.scrolling-active{
+    background-color: #fff;
+    box-shadow: 0 3px 1rem rgba(0,0,0,.1);
+}
+
+.scrolling-active .nav{
+    height: 6.6rem;
+}
+
+.scrolling-active .nav a{
+    color: #313131;
+}
+
+.scrolling-active #nav-cta{
+    background-color: #313131;
+    color: #fff;
+}
+
+.scrolling-active #nav-cta:hover{
+    background-color: #151515;
+}
+
+.scrolling-active .nav-link::after{
+    background-color: #313131;
+}
+
+/*Apply styles after scroll end*/
+
+
+/* Hero Demo Content*/
+.hero{
+    width: 100%;
+    height: 100vh;
+    background: url("./img/same2.jpg") center no-repeat;
+    background-size: cover;
+    position: relative;
+}
+
+.hero::after{
+    content: '';
+    width: inherit;
+    height: inherit;
+    position: absolute;
+    top: 0;
+    left: 0;
+    /* background-color: rgba(0,0,0,.5); */
+}
+
+.demo-content{
+    width: 100%;
+    height: 30vh;
+    background-color: #fff;
+}
+
+.res-store{
+    position: relative;
+    width: 30%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    
+}
+.res-icon{
+    position: relative;
+    /* width: 30%; */
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%,5%);
+
+}
+.res-title{
+    padding: 0%;
+    font-size: 30px;
+    text-align: center;
+    border: 1px solid black;
+}
+
+/* Hero end*/
+/* first grid */
+/* .first-grid{
+    display: grid;
+}
+.grid-item{
+    width: 50%;
+}
+.first-grid-img{
+    grid-row: 1/2;
+    grid-column: 1/2;
+}
+
+.grid-img{
+    width: 100%;
+}
+.grid-text{
+    width: 100%;
+    text-align: center;
+    font-size: 15px;
+    grid-row: 1/2;
+    grid-column: 2/3;
+} */
+
+/* ////////////////////////// */
+.adventure-grid{
+    display: grid;
+    /* height: 1px; */
+    grid-template-columns: repeat(auto-fit,minmax(25rem,1fr));
+    grid-gap: 0rem;
+    margin-bottom: 2rem;
+    text-align: center;
+}
+.adventure-grid-item p{
+    color: rgba(0,0,0,.7);
+}
+.adventure-grid-item img{
+    width: 100%;
+}
+.grid-text{
+    font-size: 20px;
+    line-height: 40px;
+    background-color: #91CCD0;
+}
+.grid-text main{
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    padding: 2px;
+}
+main  span {
+    color: cornsilk;
+}
+
+
+.btn{
+    background-color: #FF8C00;
+    font-size: 1.7rem;
+    color: cornsilk;
+    border-radius: 0.4rem;
+    display: inline;
+    padding: 1rem 2rem ;
+    text-transform: uppercase;
+    transition: background-color 650ms;
+}
+.btn:hover{
+    background-color: rgba(173, 95, 0, 0.788);
+    
+}
+
+.adventure-grid.last-grid{
+    margin-top: 105px;
+    height: 50vh;
+    color: white;
+    font-size: 20px;
+}
+.adventure-grid.last-grid p{
+    color: white;
+}
+.box-1{
+    background-color: #000000;
+}
+.box-1 .btn{
+    background-color:#4BD1A0 ;
+}
+.box-1 span{
+    color: #4BD1A0;
+}
+
+.box-2{
+    background-color: #404040;
+}
+
+.box-2 span{
+    color: #4BD1A0;
+}
+.box-3{
+    background-color: #4BD1A0;
+}
+.box-3 span{color: black;}
+.box-3 .btn{
+    background-color: black;
+}
+.last-grid hr{
+    width: 40px;
+    margin-left: 46%;
+}
+/* //////////////////////////////// */
+.over{
+    text-align: center;
+    position: absolute;
+    color: #fff;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,50%);
+    font-size: 50px;
+    z-index: 2;
+}
